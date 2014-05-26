@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "Y:/BusEncoding/bsc/tb_isim_beh.exe" -prj "Y:/BusEncoding/bsc/tb_beh.prj" "work.tb" 

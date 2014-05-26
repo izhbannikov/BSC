@@ -1,0 +1,330 @@
+--------------------------------------------------------------------
+|                      Xilinx XPower Analyzer                      |
+--------------------------------------------------------------------
+| Release                | 13.2 - O.61xd (nt)                      |
+| Command Line           | Generated from Graphical User Interface |
+--------------------------------------------------------------------
+
+--------------------------------
+|      Table of Contents       |
+--------------------------------
+| 1.  Settings                 |
+| 1.1.  Project                |
+| 1.2.  Device                 |
+| 1.3.  Environment            |
+| 1.4.  Default Activity Rates |
+| 2.  Summary                  |
+| 2.1.  On-Chip Power Summary  |
+| 2.2.  Thermal Summary        |
+| 2.3.  Power Supply Summary   |
+| 2.4.  Confidence Level       |
+| 3.  Detailed Reports         |
+| 3.1.  By Hierarchy           |
+| 3.2.  By Clock Domain        |
+| 3.3.  By Resource Type       |
+| 3.3.1.  Core Dynamic         |
+| 3.3.1.1.  Logic              |
+| 3.3.1.2.  Signals            |
+| 3.3.2.  IO                   |
+--------------------------------
+
+1.  Settings
+1.1.  Project
+------------------------------------------------------------------
+|                            Project                             |
+------------------------------------------------------------------
+| Design File               | top.ncd                            |
+| Settings File             | NA                                 |
+| Physical Constraints File | top.pcf                            |
+| Simulation Activity File  | C:/ece587/bsc/xpower_time_sim.saif |
+| Design Nets Matched       | 77%   (105/136)                    |
+| Simulation Nets Matched   | 75%   (102/136)                    |
+------------------------------------------------------------------
+
+1.2.  Device
+-----------------------------------------------
+|                   Device                    |
+-----------------------------------------------
+| Family           | Spartan3e                |
+| Part             | xc3s100e                 |
+| Package          | tq144                    |
+| Grade            | Commercial               |
+| Process          | Typical                  |
+| Speed Grade      | -4                       |
+| Characterization | PRODUCTION,v1.2,06-23-09 |
+-----------------------------------------------
+
+1.3.  Environment
+---------------------------
+|       Environment       |
+---------------------------
+| Ambient Temp (C) | 25.0 |
+| Use custom TJA?  | No   |
+| Custom TJA (C/W) | NA   |
+| Airflow (LFM)    | 0    |
+---------------------------
+
+1.4.  Default Activity Rates
+----------------------------------
+|     Default Activity Rates     |
+----------------------------------
+| FF Toggle Rate (%)     | 12.5  |
+| I/O Toggle Rate (%)    | 12.5  |
+| Output Load (pF)       | 5.0   |
+| I/O Enable Rate (%)    | 100.0 |
+| BRAM Write Rate (%)    | 50.0  |
+| BRAM Enable Rate (%)   | 25.0  |
+----------------------------------
+
+2.  Summary
+2.1.  On-Chip Power Summary
+-----------------------------------------------------------------------------
+|                           On-Chip Power Summary                           |
+-----------------------------------------------------------------------------
+|        On-Chip        | Power (mW) |  Used  | Available | Utilization (%) |
+-----------------------------------------------------------------------------
+| Clocks                |       1.47 |      1 |    ---    |       ---       |
+| Logic                 |       0.00 |      2 |      1920 |               0 |
+| Signals               |       0.02 |     36 |    ---    |       ---       |
+| IOs                   |      19.37 |     98 |       108 |              91 |
+| Quiescent             |      33.78 |        |           |                 |
+| Total                 |      54.64 |        |           |                 |
+-----------------------------------------------------------------------------
+
+2.2.  Thermal Summary
+------------------------------
+|      Thermal Summary       |
+------------------------------
+| Effective TJA (C/W) | 52.1 |
+| Max Ambient (C)     | 82.2 |
+| Junction Temp (C)   | 27.8 |
+------------------------------
+
+2.3.  Power Supply Summary
+------------------------------------------------------
+|                Power Supply Summary                |
+------------------------------------------------------
+|                      | Total | Dynamic | Quiescent |
+------------------------------------------------------
+| Supply Power (mW)    | 54.64 | 20.87   | 33.78     |
+------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+|                                            Power Supply Currents                                            |
+---------------------------------------------------------------------------------------------------------------
+|     Supply Source     | Supply Voltage | Total Current (mA) | Dynamic Current (mA) | Quiescent Current (mA) |
+---------------------------------------------------------------------------------------------------------------
+| Vccint                |          1.200 |              10.06 |                 1.70 |                   8.35 |
+| Vccaux                |          2.500 |               8.39 |                 0.39 |                   8.00 |
+| Vcco25                |          2.500 |               8.64 |                 7.14 |                   1.50 |
+---------------------------------------------------------------------------------------------------------------
+
+2.4.  Confidence Level
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                                               Confidence Level                                                                                               |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|       User Input Data       | Confidence |                        Details                         |                                                  Action                                                  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Design implementation state | High       | Design is completely routed                            |                                                                                                          |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                          |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes         |                                                                                                          |
+| Device models               | High       | Device models are Production                           |                                                                                                          |
+|                             |            |                                                        |                                                                                                          |
+| Overall confidence level    | Low        |                                                        |                                                                                                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.  Details
+3.1.  By Hierarchy
+----------------------------------------------------------------------------------------------------------------
+|  By Hierarchy   |   Power (mW)    | Logic Power (mW) | Signal Power (mW) |      # FFs      |     # LUTs      |
+----------------------------------------------------------------------------------------------------------------
+| Hierarchy total |   0.03          |   0.00           |   0.02            |      1          |      2          |
+|   top           |   0.02 /   0.03 |   0.00 /   0.00  |   0.02 /   0.02   |      0 /      1 |      1 /      2 |
+|     bsc_block   |   0.01          |   0.00           |   0.01            |      1          |      1          |
+----------------------------------------------------------------------------------------------------------------
+
+3.2.  By Clock Domain
+-----------------------------------------------------------------------------------------------------------------------------------------
+|   By Clock Domain : 1    | Power (mW)  | Freq (MHz) |       Buffer        | Buffer Enable (%) | Enable Signal | Fanout | Slice Fanout |
+-----------------------------------------------------------------------------------------------------------------------------------------
+| clk_BUFGP/IBUFG          |             |            |                     |                   |               |        |              |
+|  Logic:                  |             |            |                     |                   |               |        |              |
+|   clk_BUFGP/BUFG.GCLKMUX |       1.20  |     100.00 | BUFGMUX_GCLKMUX     |                NA | NA            |     NA |           NA |
+|   clk_BUFGP/BUFG         |       0.00  |     100.00 | BUFGMUX_GCLK_BUFFER |                NA | NA            |     NA |           NA |
+|   clk_BUFGP/IBUFG        |       0.00  |     100.00 | IBUF_INBUF          |                NA | NA            |     NA |           NA |
+|  Nets:                   |             |            |                     |                   |               |        |              |
+|   clk_BUFGP              |       0.27  |     100.00 | NA                  |                NA | NA            |      1 |            1 |
+|   clk_BUFGP/IBUFG        |       ~0.00 |     100.00 | NA                  |                NA | NA            |      1 |            1 |
+|                          |             |            |                     |                   |               |        |              |
+| Total                    |       1.47  |            |                     |                   |               |        |              |
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.  By Resource Type
+3.3.1.  Core Dynamic
+3.3.1.1.  Logic
+------------------------------------------------------------------------------------------------
+|          Logic          | Power (mW) |     Type     | Clock (MHz) | Clock Name | Signal Rate |
+------------------------------------------------------------------------------------------------
+| bsc_block/prev_state_0  |       0.00 | FFY (SLICEL) |       100.0 | clk_BUFGP  |        11.0 |
+| bsc_block/data_out<25>1 |       0.00 | G (SLICEL)   |       Async | Async      |         3.7 |
+| Mxor_verif_Result<25>1  |       0.00 | F (SLICEL)   |       Async | Async      |         1.0 |
+|                         |            |              |             |            |             |
+| Total                   |       0.00 |              |             |            |             |
+------------------------------------------------------------------------------------------------
+
+3.3.1.2.  Signals
+----------------------------------------------------------------------------------------------------------------
+|         Signals         | Power (mW) | Signal Rate | % High | Fanout | Slice Fanout |   Clock   | Logic Type |
+----------------------------------------------------------------------------------------------------------------
+| bsc_block/prev_state<0> |       0.01 |        5.50 |     NA |      3 |            3 | clk_BUFGP | NA         |
+| data_in_24_IBUF         |       0.00 |        3.50 |     NA |      3 |            3 | Async     | NA         |
+| rst_IBUF                |       0.00 |        1.50 |   10.0 |      1 |            1 | Async     | NA         |
+| data_in_6_IBUF          |       0.00 |        5.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_15_IBUF         |       0.00 |        5.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_3_IBUF          |       0.00 |        4.50 |     NA |      1 |            1 | Async     | NA         |
+| data_in_19_IBUF         |       0.00 |        4.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_23_IBUF         |       0.00 |        4.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_8_IBUF          |       0.00 |        4.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_1_IBUF          |       0.00 |        3.50 |     NA |      1 |            1 | Async     | NA         |
+| data_in_0_IBUF          |       0.00 |        5.50 |     NA |      1 |            1 | Async     | NA         |
+| data_in_21_IBUF         |       0.00 |        4.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_25_IBUF         |       0.00 |        1.50 |     NA |      2 |            2 | Async     | NA         |
+| data_in_16_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_22_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_9_IBUF          |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_11_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_17_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_10_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_7_IBUF          |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_18_IBUF         |       0.00 |        2.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_12_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_20_IBUF         |       0.00 |        3.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_13_IBUF         |       0.00 |        2.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_4_IBUF          |       0.00 |        2.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_2_IBUF          |       0.00 |        2.00 |     NA |      1 |            1 | Async     | NA         |
+| data_out_25_OBUF        |       0.00 |        1.83 |     NA |      1 |            1 | Async     | NA         |
+| data_in_14_IBUF         |       0.00 |        1.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_26_IBUF         |       0.00 |        1.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_5_IBUF          |       0.00 |        1.00 |     NA |      1 |            1 | Async     | NA         |
+| verif_25_OBUF           |       0.00 |        0.48 |     NA |      1 |            1 | Async     | NA         |
+| data_in_27_IBUF         |       0.00 |        0.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_28_IBUF         |       0.00 |        0.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_29_IBUF         |       0.00 |        0.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_30_IBUF         |       0.00 |        0.00 |     NA |      1 |            1 | Async     | NA         |
+| data_in_31_IBUF         |       0.00 |        0.00 |     NA |      1 |            1 | Async     | NA         |
+|                         |            |             |        |        |              |           |            |
+| Total                   |       0.02 |             |        |        |              |           |            |
+----------------------------------------------------------------------------------------------------------------
+
+3.3.2.  IO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|         IO         | Power (mW) |   I/O Standard   | Signal Rate | % High | Clock (MHz) | Clock Name | Input Pins | Output Pins | Bidir Pins | Output Enable (%) | Output Load (pF) | Data Rate | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Vccint (mW) | Vccaux (mW) | Vcco On-Chip Termal (mW)  | Vcco Supply Current (mA) |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| data_out<0>        |       0.99 | LVCMOS25_12_SLOW |       12.00 |   63.5 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.05 |                      0.93 |                     0.37 |
+| data_out<15>       |       0.91 | LVCMOS25_12_SLOW |       11.00 |    6.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.05 |                      0.85 |                     0.34 |
+| data_out<6>        |       0.91 | LVCMOS25_12_SLOW |       11.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.05 |                      0.85 |                     0.34 |
+| data_out<3>        |       0.83 | LVCMOS25_12_SLOW |       10.00 |   63.5 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.78 |                     0.31 |
+| data_out<19>       |       0.74 | LVCMOS25_12_SLOW |        9.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.70 |                     0.28 |
+| data_out<21>       |       0.74 | LVCMOS25_12_SLOW |        9.00 |    7.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.70 |                     0.28 |
+| data_out<23>       |       0.74 | LVCMOS25_12_SLOW |        9.00 |    7.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.70 |                     0.28 |
+| data_out<8>        |       0.74 | LVCMOS25_12_SLOW |        9.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.04 |                      0.70 |                     0.28 |
+| data_out<1>        |       0.66 | LVCMOS25_12_SLOW |        8.00 |   63.5 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.62 |                     0.25 |
+| data_out<10>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    3.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<11>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    3.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<12>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    3.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<16>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    6.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<17>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<20>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<22>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    7.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<24>       |       0.58 | LVCMOS25_12_SLOW |        7.00 |    7.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<7>        |       0.58 | LVCMOS25_12_SLOW |        7.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<9>        |       0.58 | LVCMOS25_12_SLOW |        7.00 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.01 |        0.03 |                      0.54 |                     0.22 |
+| data_out<13>       |       0.41 | LVCMOS25_12_SLOW |        5.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.39 |                     0.16 |
+| data_out<18>       |       0.41 | LVCMOS25_12_SLOW |        5.00 |    6.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.39 |                     0.16 |
+| data_out<2>        |       0.41 | LVCMOS25_12_SLOW |        5.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.39 |                     0.16 |
+| data_out<4>        |       0.41 | LVCMOS25_12_SLOW |        5.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.39 |                     0.16 |
+| data_out<25>       |       0.33 | LVCMOS25_12_SLOW |        4.00 |    2.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.02 |                      0.31 |                     0.12 |
+| data_out<14>       |       0.25 | LVCMOS25_12_SLOW |        3.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.01 |                      0.23 |                     0.09 |
+| data_out<26>       |       0.25 | LVCMOS25_12_SLOW |        3.00 |    4.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.01 |                      0.23 |                     0.09 |
+| data_out<5>        |       0.25 | LVCMOS25_12_SLOW |        3.00 |    5.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.01 |                      0.23 |                     0.09 |
+| verif<25>          |       0.25 | LVCMOS25_12_SLOW |        3.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.01 |                      0.23 |                     0.09 |
+| clk                |       0.18 | LVCMOS25         |      100.00 |   49.7 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.18 |        0.00 |                      0.00 |                     0.00 |
+| data_out<27>       |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| data_out<28>       |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| data_out<29>       |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| data_out<30>       |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| data_out<31>       |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<0>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<10>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<11>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<12>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<13>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<14>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<15>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<16>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<17>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<18>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<19>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<1>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<20>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<21>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<22>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<23>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<24>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<26>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<27>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<28>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<29>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<2>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<30>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<31>          |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<3>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<4>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<5>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<6>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<7>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<8>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| verif<9>           |       0.08 | LVCMOS25_12_SLOW |        1.00 |    0.0 |       Async | Async      |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.08 |                     0.03 |
+| data_in<0>         |       0.01 | LVCMOS25         |       11.00 |   64.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<15>        |       0.01 | LVCMOS25         |       10.00 |    6.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<6>         |       0.01 | LVCMOS25         |       10.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<3>         |       0.01 | LVCMOS25         |        9.00 |   64.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<19>        |       0.01 | LVCMOS25         |        8.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<21>        |       0.01 | LVCMOS25         |        8.00 |    7.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<23>        |       0.01 | LVCMOS25         |        8.00 |    7.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<8>         |       0.01 | LVCMOS25         |        8.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<1>         |       0.01 | LVCMOS25         |        7.00 |   64.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<24>        |       0.01 | LVCMOS25         |        7.00 |    7.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<10>        |       0.01 | LVCMOS25         |        6.00 |    3.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<11>        |       0.01 | LVCMOS25         |        6.00 |    3.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<12>        |       0.01 | LVCMOS25         |        6.00 |    3.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<16>        |       0.01 | LVCMOS25         |        6.00 |    6.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<17>        |       0.01 | LVCMOS25         |        6.00 |    4.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<20>        |       0.01 | LVCMOS25         |        6.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<22>        |       0.01 | LVCMOS25         |        6.00 |    7.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<7>         |       0.01 | LVCMOS25         |        6.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<9>         |       0.01 | LVCMOS25         |        6.00 |    4.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.01 |        0.00 |                      0.00 |                     0.00 |
+| data_in<13>        |       0.00 | LVCMOS25         |        4.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<18>        |       0.00 | LVCMOS25         |        4.00 |    6.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<2>         |       0.00 | LVCMOS25         |        4.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<4>         |       0.00 | LVCMOS25         |        4.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<25>        |       0.00 | LVCMOS25         |        3.00 |    3.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| rst                |       0.00 | LVCMOS25         |        3.00 |   10.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<14>        |       0.00 | LVCMOS25         |        2.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<26>        |       0.00 | LVCMOS25         |        2.00 |    4.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<5>         |       0.00 | LVCMOS25         |        2.00 |    5.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<27>        |       0.00 | LVCMOS25         |        0.00 |    0.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<28>        |       0.00 | LVCMOS25         |        0.00 |    0.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<29>        |       0.00 | LVCMOS25         |        0.00 |    0.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<30>        |       0.00 | LVCMOS25         |        0.00 |    0.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+| data_in<31>        |       0.00 | LVCMOS25         |        0.00 |    0.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 |                     0.00 |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                          |
+| Internal VREFs (0) |       0.00 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                          |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                          |
+| Total              |      19.37 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Analysis completed: Fri Apr 13 12:00:19 2012
+----------------------------------------------------------------

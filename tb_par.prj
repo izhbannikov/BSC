@@ -1,0 +1,3 @@
+vhdl work "sdlc_pkg.vhd"
+vhdl work "netgen/par/top_timesim.vhd"
+vhdl work "tb.vhd"
